@@ -6,6 +6,11 @@ module CurrentUserConcern
 		#super whenever you override method to have the same behaviour as current method 
 	end
 	def guest_user
-		OpenStruct.new(name: "Guest User", first_name: "Guest", last_name:"User", emial: "guest@support.com")		
+		guest = GuestUser.new
+		guest.name = "Guest User"
+		guest.first_name = "Guest"
+		guest.last_name = "User"
+		guest.email = "guest@example.com"
+		guest
 	end
 end
