@@ -14,10 +14,11 @@
   </head>
 
   <body class="d-flex h-100 text-center text-white bg-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= render "shared/nav", location: 'top' %>
+    <%= render "shared/application_nav" %>
 
     <%= login_helper %>
 
@@ -28,5 +29,6 @@
     <footer class="mt-auto text-white-50">
       <%= @copyright %>
     </footer>
+  </div>
   </body>
 </html>
