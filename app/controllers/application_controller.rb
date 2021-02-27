@@ -3,4 +3,7 @@ class ApplicationController < ActionController::Base
 	include SetSource
 	include CurrentUserConcern
 	include DefaultPageContent
+	include ZaprzemoViewTool
+
+
 end
