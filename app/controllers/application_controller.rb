@@ -5,5 +5,8 @@ class ApplicationController < ActionController::Base
 	include DefaultPageContent
 	include ZaprzemoViewTool
 
-
+Devise.setup do |config|
+  # The default HTTP method used to sign out a resource. Default is :delete.
+  config.sign_out_via = :get
+end
 end
