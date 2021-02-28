@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 /*
  * Globals
@@ -173,4 +174,7 @@ h6, .h6 {
 
 .top-buffer { 
 margin-top:10px; 
+}
+.social-links li {
+  font-size: 2em;
 }
