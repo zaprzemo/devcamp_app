@@ -62,7 +62,13 @@ body {
 .card-body {
   color: black;
   text-align: left;
+
+}
+.top-buffer { 
+margin-top:10px; 
 }
 .auth-links a{
+  text-decoration: none;
   color: black;
+  font-weight: bold;
 }
