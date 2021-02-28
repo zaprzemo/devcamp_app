@@ -1,28 +1,37 @@
 <%= form_with(model: @portfolio_item) do |form| %>
- 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div> 
-  <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle %>
+ <div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'form-control top-buffer' %>
+    </div> 
+    <div class="form-group">
+      <%= form.label :subtitle %>
+      <%= form.text_field :subtitle , class: 'form-control top-buffer'%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :body %>
+      <%= form.text_area :body, class: 'form-control top-buffer', rows:5 %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-  <ul>
-      <%= form.fields_for :technologies do |technology| %>
-    <li>
-      <%= technology.label :name %>
-      <%= technology.text_field :name %>      
-    </li>
-    <% end %>
-  </ul>
+    <hr class="top-buffer">
+  <div class="col-md-12">
+    <h2>Technologies Used:</h2>
+    <div>
+        <%= form.fields_for :technologies do |technology| %>
+      <div class="form-group">
+        <%= technology.label :name %>
+        <%= technology.text_field :name, class: 'form-control top-buffer' %>      
+      </div>
+      <% end %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="form-group d-grid gap-2 mx-auto">
+      <%= form.submit "Save Portfolio Item", class: 'top-buffer btn btn-primary'%>
+    </div>
   </div>
+</div>
 <% end %>
