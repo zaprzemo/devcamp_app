@@ -1,6 +1,6 @@
 <div class="album py-5 bg-light">
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-controller="drag" data-drag-url="/portfolios/:id/move">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" <%= "data-controller=drag data-drag-url=/portfolios/:id/move" if logged_in?(:site_admin) %>>
 
 			<%= render partial: 'portfolio_item', collection: @portfolio_items %>
 
