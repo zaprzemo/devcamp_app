@@ -1,8 +1,8 @@
-<div class="container porftolio-form">
+<div class="container portfolio-container">
 	<h1>Edit a new Portfolio Item</h1>
 
 	<%= render 'form', portfolio_item: @portfolio_item %>
 
-	<%= link_to 'Show', @portfolio_item %> |
+	<%= link_to 'Show', portfolio_show_path(@portfolio_item) %> |
 	<%= link_to 'Back', portfolios_path %>
 </div>

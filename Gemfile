@@ -55,3 +55,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 
 gem "acts_as_list", "~> 1.0"
+gem 'carrierwave', '~> 2.2'
+gem 'mini_magick', '~> 4.11'
+gem 'carrierwave-aws', '~> 1.5'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
