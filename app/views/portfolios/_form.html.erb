@@ -31,12 +31,12 @@
   <div class="col-md-12">
     <h2>Technologies Used:</h2>
     <div>
-        <%= form.fields_for :technologies do |technology| %>
-      <div class="form-group">
-        <%= technology.label :name %>
-        <%= technology.text_field :name, class: 'form-control top-buffer' %>      
-      </div>
+      <%= form.fields_for :technologies do |technology| %>
+        <%= render 'technology_fields', f: technology %>
       <% end %>
+      <div>
+        <%= link_to_add_association 'Add Technology', form, :technologies %>
+      </div>
     </div>
 
     <div class="form-group d-grid gap-2 mx-auto">
