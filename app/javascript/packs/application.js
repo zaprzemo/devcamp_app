@@ -7,8 +7,10 @@
 //= require popper
 //= require bootstrap-sprockets
 
+
 require("jquery")
 require("@nathanvda/cocoon")
+require("gritter/js/jquery.gritter.js")
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"

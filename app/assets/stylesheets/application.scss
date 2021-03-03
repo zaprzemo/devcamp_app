@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import "gritter";
 /*
  * Globals
  */
@@ -102,4 +102,11 @@ margin-top:10px;
   }
 .app-footer {
   color: white;
+}
+
+.custom_gritter {
+  background-color: black;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid white;
 }
