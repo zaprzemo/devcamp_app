@@ -5,12 +5,10 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(comment_params)
   end
 
-
   def destroy
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to blog_path(@comment.blog_id), notice: "Comment was successfully removed." }
-      format.json { head :no_content }
     end
   end
 

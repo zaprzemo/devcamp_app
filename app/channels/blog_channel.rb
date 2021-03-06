@@ -4,10 +4,9 @@ class BlogChannel < ApplicationCable::Channel
   end
 
   def unsubscribed
-
   end
 
   def send_comment(data)
-    current_user.comments.create!(content: data['comment'], blog_id: data['blog_id'], user_id: current_user.id)
+    current_user.comments.create!(content: data['comment'], blog_id: data['blog_id'])
  end
 end

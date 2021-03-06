@@ -9,28 +9,31 @@ $(document).on('turbolinks:load', function () {
   let comments = $('#comments');
 
   if (comments.length > 0) {
-    App.global_chat = consumer.subscriptions.create({channel: "BlogChannel", blog_id: comments.data('blog-id')}, {
-      connected() {
-        // Called when the subscription is ready for use on the server
-      },
+    App.global_chat = consumer.subscriptions.create({
+      channel: "BlogChannel",
+      blog_id: comments.data('blog-id')},
+      {
+        connected() {
+          // Called when the subscription is ready for use on the server
+        },
 
-      disconnected() {
-        // Called when the subscription has been terminated by the server
-      },
+        disconnected() {
+          // Called when the subscription has been terminated by the server
+        },
 
-      received(data) {
-        // Called when there's incoming data on the websocket for this channel
-        alert(data['comment']);
-        comments.append(data['comment']);
-      },
+        received(data) {
+          // Called when there's incoming data on the websocket for this channel
+          alert(data['comment']);
+          alert('received');
+          comments.append(data['comment']);
+        },
 
-      send_comment(comment, blog_id) {
-        console.log(blog_id);
-        console.log(comment);
-        this.perform('send_comment', {comment: comment, blog_id: blog_id});
-      }
-
-    });
+        send_comment(comment, blog_id) {
+          console.log(blog_id);
+          console.log(comment);
+          this.perform('send_comment', {comment: comment, blog_id: blog_id});
+        }
+      });
   };
 
  $('#new_comment').submit((e) => {
