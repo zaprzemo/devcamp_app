@@ -1,4 +1,9 @@
 <%= form_with(model: @portfolio_item) do |form| %>
+  <% if @portfolio_item.errors.any? %>
+    <% @portfolio_item.errors.full_messages.each do |error| %>
+      <%= alert_generator error %> %>
+    <% end %>
+  <% end %>
  <div class="row">
   <div class="col-md-6">
     <div class="form-group">
@@ -31,12 +36,12 @@
   <div class="col-md-12">
     <h2>Technologies Used:</h2>
     <div>
-        <%= form.fields_for :technologies do |technology| %>
-      <div class="form-group">
-        <%= technology.label :name %>
-        <%= technology.text_field :name, class: 'form-control top-buffer' %>      
-      </div>
+      <%= form.fields_for :technologies do |technology| %>
+        <%= render 'technology_fields', f: technology %>
       <% end %>
+      <div>
+        <%= link_to_add_association 'Add Technology', form, :technologies %>
+      </div>
     </div>
 
     <div class="form-group d-grid gap-2 mx-auto">

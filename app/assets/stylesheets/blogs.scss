@@ -1,6 +1,6 @@
 @import "bootstrap";
 @import "font-awesome";
-
+@import "gritter";
 /*
  * Globals
  */
@@ -177,4 +177,10 @@ margin-top:10px;
 }
 .social-links li {
   font-size: 2em;
+}
+.custom_gritter {
+  background-color: black;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid white;
 }
