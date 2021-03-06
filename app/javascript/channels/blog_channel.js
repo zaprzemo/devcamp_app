@@ -20,13 +20,10 @@ $(document).on('turbolinks:load', function () {
 
       received(data) {
         // Called when there's incoming data on the websocket for this channel
-        alert(data['comment']);
         comments.append(data['comment']);
       },
 
       send_comment(comment, blog_id) {
-        console.log(blog_id);
-        console.log(comment);
         this.perform('send_comment', {comment: comment, blog_id: blog_id});
       }
 
