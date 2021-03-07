@@ -8,6 +8,8 @@ require("@nathanvda/cocoon")
 require("gritter/js/jquery.gritter.js")
 import "controllers"
 import "bootstrap"
+require("controllers/typed")
+import "controllers/type_implementation"
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()

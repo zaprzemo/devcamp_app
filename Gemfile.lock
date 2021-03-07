@@ -252,6 +252,8 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
+    typedjs-rails (2.0.9)
+      railties (>= 3.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     warden (1.2.9)
@@ -302,6 +304,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   spring
   turbolinks (~> 5)
+  typedjs-rails (~> 2.0.9)
   tzinfo-data
   web-console (>= 4.1.0)
   webpacker (~> 5.0)
