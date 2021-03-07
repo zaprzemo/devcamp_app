@@ -13,7 +13,7 @@
             Comment posted by <span class="comment-name"><%= comment.user.first_name %></span>
             <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago
           </div>
-            <span class="pull-right"><%= link_to fa_icon('trash'), comment, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <span class="pull-right"><%= link_to fa_icon('trash'), comment, method: :delete, data: { confirm: 'Are you sure?' } %></span>
         </div>
       </div>
     </div>

@@ -7,7 +7,6 @@ require("jquery")
 require("@nathanvda/cocoon")
 require("gritter/js/jquery.gritter.js")
 import "controllers"
-
 import "bootstrap"
 require("@rails/ujs").start()
 require("turbolinks").start()
