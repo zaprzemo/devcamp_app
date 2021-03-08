@@ -16,7 +16,7 @@
 
   <body class="d-flex h-100 text-center text-white bg-dark">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-   
+
     <%= video_tag(
       'HardDrivePhotojpeg.ogv',
       id: 'background',
@@ -29,12 +29,10 @@
     <%= render "shared/application_nav" %>
 
     <%= yield %>
-    
-    <%= render "shared/application_footer" %>
-    
-    <%= alerts %>
 
-    <%= source_helper("application") %>
+    <%= render "shared/application_footer" %>
+
+    <%= alerts %>
 
 
   </div>
