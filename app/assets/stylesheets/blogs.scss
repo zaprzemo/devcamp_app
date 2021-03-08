@@ -1,6 +1,17 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
+
+@font-face{
+  font-family: 'Fira Sans';
+  src:font-url('FiraSans-Medium.ttf');
+}
+@font-face{
+  font-family: 'Ubuntu';
+  src:font-url('Ubuntu-Bold.ttf');
+}
+
+
 /*
  * Globals
  */
@@ -12,7 +23,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #555;
 }
 
@@ -22,9 +33,9 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
-  color: #333;
+  color: #495057;
 }
 
 

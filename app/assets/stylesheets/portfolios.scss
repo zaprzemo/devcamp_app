@@ -1,8 +1,18 @@
 @import "bootstrap";
 @import "gritter";
 
+@font-face{
+  font-family: 'Fira Sans';
+  src:font-url('FiraSans-Medium.ttf');
+}
+@font-face{
+  font-family: 'Ubuntu';
+  src:font-url('Ubuntu-Bold.ttf');
+}
+
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .navbar {
@@ -33,6 +43,15 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f7f7f7;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,{
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .card {
@@ -70,8 +89,8 @@ footer p {
 .porftolio-form {
 	padding: 20px;
 }
-.top-buffer { 
-margin-top:10px; 
+.top-buffer {
+margin-top:10px;
 }
 .custom_gritter {
   background-color: black;
